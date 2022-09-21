@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela+Round&display=swap');
+
+* {
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*---------------IMAGEN FONDO------------*/
+
+.MimagenFondo{
+    background-image: url(/images/Fondo-perfil.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding-top: 145px;
+    padding-bottom: 80px;
+}
+
+/* -------------- CABECERA ------------- */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0px 1px 5px #a3a3a3;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1;
+}
+
+.Snavbar{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* -------------- ESTILOS ITEMS MENU ------------- */
+
+
+.Snavbar a{
+    font-size: 16px;
+    font-family: roboto;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #959595;
+    transition: ease 0.5s;
+}
+
+.Snavbar a:hover{
+    color: #2962FF;
+}
+
+/* ---------- ICONO MENU HAMBURGUESA -------------- */
+
+.Sburger-menu .fa-bars{
+    font-size: 28px;
+    color: #2962FF;
+}
+ 
+/*--------------CAJA PERFIL USUARIO-------------*/
+
+.Mperfil{
+    background: rgba(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    
+}
+
+.MperfilImg{
+    width: 312px;
+    height: 312px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.MperfilImg img{
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 35px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #979797;
+}
+
+hr{
+    width: 90%;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+.MprofileDescription{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.MprofileDescription h4{
+    font-size: 20px;
+    letter-spacing: 1px;
+    color:#1EA1F2;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.MprofileDescription p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.MbuttonProfile a{
+    width: 130px;
+    padding: 10px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    color: #ffffff;
+    background-color: #00B8D4;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #c3c3c3;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.MbuttonProfile a:hover{
+    background-color: #2962FF;
+}
+
+.MnombreUser {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.MnombreUser h3 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: #2962FF;
+    
+}
+/* --------------- ESTILOS USUARIO --------------- */
+
+.dataUser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataUser img{
+    margin-left: 15px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.dataUser p{
+    color: #1EA1F2;
+    letter-spacing: 2px;
+  }
+
+/* -------------- MENÚ DESPLEGABLE ------------ */
+
+.user {
+    position: relative;
+    display: inline-block;
+}
+
+.actionUser {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 125px;
+    padding: 8px 8px;
+    z-index: 1;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    transition: all 0.4s ease;
+}
+
+.user:hover .actionUser {
+    display: block;
+}
+
+.actionUser h6 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.actionUser a {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #2962FF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* -------------- REDES SOCIALES FLOTANTES ------------ */
+
+.sticky-social{
+    position:fixed;
+    top:200px;
+    left:0;
+    padding:0px;
+    margin:0px;
+  }
+  .social{
+    list-style:none;
+  }
+  .social li{
+    padding:10px 10px;
+    font-size:15px;
+    transition:all 0.3s ease-in-out;
+  }
+  .social li:hover{
+      margin-right:-20px;
+  }
+  .social li:hover .fa-brands{
+      margin-left:10px;
+  }
+  
+  .fa-brands{
+    color:#fff;
+    transition:all 0.3s ease-in-out;
+  }
+  .fb{
+    background-color:#3C5A98;
+  }
+  .twitter{
+      background-color:#1EA1F2;
+  }
+  .insta{
+      background-color:#C13584;
+  }
+  .wpp{
+      background-color:#25D366;
+  }
+
+
+/* ---------------- PIE DE PAGINA ---------- */
+
+.Sfooter{
+    width: 100%;
+    background-color: #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.Sfooter div{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.Sfooter img{
+    width: 100%;
+}
+
+.Sfooter h3{
+    color: #2962FF;
+    letter-spacing: 1px;
+}
+
+.Sfooter p{
+    margin-top: 15px;
+}
+
+/* ---------- MEDIA QUERYS ----------- */
+
+@media (min-width: 0px) and (max-width: 576px){
+
+    /* -------------- CABECERA ------------- */
+    
+        header img{
+            width: 200px;
+        }
+    
+        .Snavbar{
+            display: none;
+        }
+    
+        /* --------------- ESTILOS USUARIO --------------- */
+    
+        .user p{
+            display: none;
+            color: #1EA1F2;
+            letter-spacing: 2px;
+        }
+    }
+    
+    @media (min-width: 577px) and (max-width: 899px){
+    
+        header img{
+            width: 350px;
+        }
+    
+        .Snavbar{
+            display: none;
+        }
+
+        /*--------CAJA USUARIO-----------*/
+
+        .Mperfil{
+            width: 70%;
+        }
+        
+        /* ---------------- PIE DE PAGINA ---------- */
+    
+        .Sfooter img{
+            width: 50%;
+        }
+    } 
+    
+    @media (min-width: 900px) and (max-width: 1920px){
+    
+        header img{
+            width: 200px;
+        }
+    
+        .Sburger-menu{
+            display: none;
+        }
+       /*-----------CAJA USUARIO---------*/
+        .Mperfil{
+            width: 50%;
+        }
+
+        .dataUser i {
+            display: none;
+        }
+    
+         /* -------------- REDES SOCIALES FLOTANTES ------------ */
+        .social{
+            z-index: 0;
+        }
+    
+         .social li{
+            padding:10px 10px;
+            transition:all 0.3s ease-in-out;
+          }
+          .social li:hover{
+              margin-right:-30px;
+          }
+          .social li:hover .fa-brands{
+              margin-left:20px;
+          }
+    
+        .QtextoProducto1, .QtextoProducto2, .QtextoProducto3{
+            font-size: 20px;
+        }
+    
+        .QlistadoyCantidad{
+            font-size: 25px;
+        }
+    
+    
+        .Qtitulo{
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 78%;
+            font-size: 160%
+            
+        }
+    
+        /* ---------------- PIE DE PAGINA ---------- */
+    
+        .Sfooter div{
+            width: 30%;
+        }
+    
+        .Sfooter img{
+            width: 80%;
+        }
+    
+    }

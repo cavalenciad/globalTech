@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Bienvenido a Global Tech</title>
+</head>
+<body>
+    <!-------- MENU DE NAVEGACIÓN -------->
+    <%- include("./partials/header.ejs")%>
+
+    <!-------- REDES SOCIALES -------->
+    <%- include("./partials/social.ejs")%>
+
+    <!-------- SLIDE -------->
+    <div class="Scarrusel">
+        <img src="images/images_index/slide-3.jpg" alt="Control Xbox One">
+        <!--<img src="images/images_index/slide-2.jpg" alt="Control Xbox One">
+        <img src="images/images_index/slide-3.jpg" alt="Control Xbox One">
+        <img src="images/images_index/slide-4.jpg" alt="Control Xbox One">-->
+    </div>
+
+    <!-------- SECCIÓN PRINCIPAL -------->
+    <section class="SseccionPrincipalHome">
+        <h1><i class="fa-solid fa-gamepad-modern"></i>CATEGORÍAS DE PRODUCTOS</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Suscipit iusto, nostrum, necessitatibus nihil quibusdam tempora esse sapiente velit temporibus 
+        excepturi assumenda, neque vero expedita. Aspernatur architecto excepturi iste maxime ipsam.</p>
+    </section>
+
+    <!-------- SECCIÓN PRODUCTOS DESTACADOS -------->
+    <div class="ScategoriasDestacadas">
+        <div class="Scategoria">
+            <a href="/productList#perifericos">
+                <img src="images/images_index/headset.png" alt="Icono perifericos">
+                <p>Periféricos</p>
+            </a>
+        </div>
+        <div class="Scategoria">
+            <a href="#">
+                <img src="images/images_index/gaming.png" alt="Icono laptop">
+                <p>Portatiles</p>
+            </a>
+        </div>
+        <div class="Scategoria">
+            <a href="#">
+                <img src="images/images_index/graphic-card.png" alt="Tarjeta grafica">
+                <p>GPU</p>
+            </a>
+        </div>
+        <div class="Scategoria">
+            <a href="#">
+                <img src="images/images_index/keyboard.png" alt="Teclado">
+                <p>Teclados</p>
+            </a>
+        </div>
+        <div class="Scategoria">
+            <a href="/productList#consoles">
+                <img src="images/images_index/console.png" alt="Consola">
+                <p>Consolas</p>
+            </a>
+        </div>
+        <div class="Scategoria">
+            <a href="#">
+                <img src="images/images_index/mobile-game.png" alt="Celular gamer">
+                <p>Celulares</p>
+            </a>
+        </div>
+        <div class="Scategoria">
+            <a href="#">
+                <img src="images/images_index/screen.png" alt="Pantalla">
+                <p>Pantallas</p>
+            </a>
+        </div>
+        <div class="Scategoria">
+            <a href="#">
+                <img src="images/images_index/pc-tower.png" alt="Torre pc">
+                <p>Chasis</p>
+            </a>
+        </div>
+    </div>
+
+    <!-------- SECCIÓN PRODUCTOS HOME -------->
+    <section class="SseccionProductosHome">
+        <h2>PRODUCTOS MÁS VENDIDOS</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Suscipit iusto, nostrum, necessitatibus nihil quibusdam tempora esse sapiente velit temporibus 
+        excepturi assumenda, neque vero expedita.</p>
+    </section>
+
+    <div class="SproductosDestacados">
+        <% featured.forEach(featured => { %>
+        <div class="Sproducto">
+            <img src="/images/Productos/<%= featured.imagen1 %>" alt="<%=featured.nombre%>"/>
+            <h4><%= featured.nombre%></h4>
+            <p class="Sprecio"><%= featured.precio%></p>
+            <a href="/products/productDetail/<%= featured.nombre%>"><i class="fas fa-info-circle"></i> Más información</a>
+        </div>
+        <% }) %>
+    </div>
+
+    <div class="Sfondo">
+        <p class="StituloFondo">CONOCE TODOS NUESTROS PRODUCTOS</p>
+        <p class="StextoFondo"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Asperiores expedita quam esse dolore fugit voluptatibus nam sint, 
+            delectus rerum veniam officiis mollitia iste sapiente assumenda 
+            facere ipsum sunt dignissimos ab?</p>
+            <a href="/productDetail"><i class="fas fa-info-circle"></i> Más información</a>
+      </div>
+
+    <!-------- PIE DE PAGINA -------->
+    <%- include("./partials/footer.ejs")%>
+
+</body>
+</html>
