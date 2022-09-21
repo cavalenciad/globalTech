@@ -5,7 +5,7 @@ const methodOverride = require('method-override');
 const session = require ('express-session');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const cookies = require ('cookie-parser');
-const {PORT} = require('./config.js');
+const PORT = process.env.PORT || 3050
 
 const rutaMain = require("./routers/main.js");
 const rutaUser = require("./routers/users.js");
