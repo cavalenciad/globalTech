@@ -1,7 +1,6 @@
 {
   "name": "code",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
@@ -25,5 +24,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cavalenciad/globalTech.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cavalenciad/globalTech/issues"
+  },
+  "homepage": "https://github.com/cavalenciad/globalTech#readme",
+  "description": ""
 }
