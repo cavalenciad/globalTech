@@ -1,24 +1,27 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "Juanma.1991",
-    "database": "db_globaltech",
-    "host": "localhost",
+    "port": "5506",
+    "password": "jjWgjtRTZilHTCiGGP0U",
+    "database": "railway",
+    "host": "containers-us-west-59.railway.app",
     "dialect": "mysql",
     "logging": sql => sql.substr(0,20)
   },
   "test": {
     "username": "root",
-    "password": "Juanma.1991",
-    "database": "db_globaltech",
-    "host": "localhost",
-    "dialect": "mysql"
+    "port": "5506",
+    "password": "jjWgjtRTZilHTCiGGP0U",
+    "database": "railway",
+    "host": "containers-us-west-59.railway.app",
+    "dialect": "mysql",
   },
   "production": {
     "username": "root",
-    "password": "Juanma.1991",
-    "database": "db_globaltech",
-    "host": "localhost",
-    "dialect": "mysql"
+    "port": "5506",
+    "password": "jjWgjtRTZilHTCiGGP0U",
+    "database": "railway",
+    "host": "containers-us-west-59.railway.app",
+    "dialect": "mysql",
   }
 }
