@@ -19,34 +19,56 @@
 <!-------- REDES SOCIALES -------->
 <%- include("./partials/social.ejs")%>
 
-<div class="jImagenFondo">
-    <form action="/user/login" method="POST">
-        <h3>Iniciar Sesión</h3>
-        <div>
-            <input placeholder="Email" type="text" name="email" id="Email">
-            <% if (locals.errors && errors.email) { %>
-                <div class="jerrors">
-                 <%= errors.email.msg %> 
-                </div>
-            <% } %>
+<div class="box">
+    <form action="/user/login" method="POST" id="userLoginForm">
+
+        <h2>Iniciar Sesión</h2>
+
+        <div hidden id="errorsDiv">
+
         </div>
-        <div>
-            <input placeholder="Contraseña" type="password" name="contrasena" id="Contraseña">
-                <% if (locals.errors && errors.contrasena) { %>
-                    <div class="jerrors">
-                     <%= errors.contrasena.msg %> 
-                    </div>
-                <% } %>
+        <div class="inputBox">
+           
+            <input type="text" name="email" id="email"  placeholder="Email" data-label="Email">
+            <i></i>
         </div>
-        <div class="jRecuerdame">
-            <input  class="jCheckbox" type="checkbox" name="jRecuerdame" id="jRecuerdame">Recuérdame
+        <% if (locals.errors && errors.email) { %>
+            <div class="jerrors">
+             <%= errors.email.msg %> 
+            </div>
+        <% } %>
+
+        <div class="inputBox">
+         
+            <input type="password"  name="contrasena" id="contrasena"  placeholder="Contraseña" data-label="Contraseña">
+            <i></i>
+            <!-- Validadores de error de campo -->
         </div>
 
-        <button type="submit">Iniciar Sesión</button>
-        <p class="jNoCuenta"> <a href="/user/register">¿Aún no tiene una cuenta?</a>
-        </p>
+        <% if (locals.errors && errors.contrasena) { %>
+            <div class="jerrors">
+             <%= errors.contrasena.msg %> 
+            </div>
+        <% } %>
+
+        <div class="links">
+            <a href="/user/register"> ¿Aún no tiene una cuenta? </a>
+            <a href="#"></a>
+        </div>
+
+        <div class="jRecuerdame">
+            <input  class="jCheckbox" type="checkbox" name="jRecuerdame" id="jRecuerdame" >Recuérdame
+        </div>
+
+
+        <button type="submit"> Ingresar </button>
+
     </form>
 </div>
+
+<script src="/js/loginFormValidator.js"></script>
+
+
 <!-------- PIE DE PAGINAAAAA -------->
 
 <%- include ("./partials/footer.ejs")%>

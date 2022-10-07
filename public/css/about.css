@@ -1,27 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela+Round&display=swap');
 
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
     font-family: roboto;
+
 }
 
 p{
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
-a{
-    letter-spacing: 2px;
-    font-weight: 600;
-    color: #959595;
-    transition: ease 0.5s;
+body{
+    background-color: #121212;
+    position: relative;
+    min-height: 100vh;
 }
 
 /* -------------- CABECERA ------------- */
 
 header{
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -41,28 +42,6 @@ header{
 
 /* -------------- ESTILOS ITEMS MENU ------------- */
 
-
-.Snavbar a{
-    font-size: 16px;
-    font-family: roboto;
-    letter-spacing: 2px;
-    font-weight: 600;
-    color: #959595;
-    transition: ease 0.5s;
-}
-
-.Snavbar a:hover{
-    color: #2962FF;
-}
-
-/* ---------- ICONO MENU HAMBURGUESA -------------- */
-
-.Sburger-menu .fa-bars{
-    font-size: 28px;
-    color: #2962FF;
-}
-
-/* --------------- ESTILOS USUARIO --------------- */
 body{margin:0;padding:0;}
 .hamburger{
 	position:relative;
@@ -162,6 +141,22 @@ body{margin:0;padding:0;}
 }
 
 
+a{
+    font-size: 16px;
+    font-family: roboto;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #959595;
+    transition: ease 0.5s;
+}
+
+.Snavbar a:hover{
+    color: #2962FF;
+    font-weight: 800;
+}
+
+/* --------------- ESTILOS USUARIO --------------- */
+
 .dataUser{
     display: flex;
     justify-content: center;
@@ -218,6 +213,13 @@ body{margin:0;padding:0;}
     padding-bottom: 20px;
 }
 
+/* ---------- ICONO MENU HAMBURGUESA -------------- */
+
+.fa-bars{
+    font-size: 28px;
+    color: #2962FF;
+}
+
 /* -------------- REDES SOCIALES FLOTANTES ------------ */
 
 .sticky-social{
@@ -226,6 +228,7 @@ body{margin:0;padding:0;}
     left:0;
     padding:0px;
     margin:0px;
+    z-index: 1;
   }
   .social{
     list-style:none;
@@ -259,173 +262,103 @@ body{margin:0;padding:0;}
       background-color:#25D366;
   }
 
-/* ---------- IMAGEN PRINCIPAL -----------*/
+  /* ---------------- SECCIÓN PRICIPAL SOBRE NOSOTROS ---------- */
 
-.image img{
-    width: 100%;
-    margin-top: 80px;
-}
-
-/* ---------- IMAGEN Y DESCRIPCIÓN DE PRODUCTO ----------*/
-
-.container{
-    width: 100%;
-    display : flex;
-    flex-direction : row;
-    flex-wrap: wrap;
-}
-
-.productImage{
-    width: 100%;
-    margin: 10px;
-}
-
-.productDescription{
-    color: rgb(39, 39, 39);
-    font-weight: 100;
-    width: 100%;
-    padding: 10px;
-    margin: 10px;
-    box-shadow: 0px 0px 3px #9d9d9d;
-    border-radius: 10px;
-    align-self: center;
-}
-
-.namePrice .name{
-    font-size: 50px;
-    color: rgb(39, 39, 39);
+.SseccionPrincipalAbout{
     text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 150px;
+    padding-top: 60px;
+    margin-bottom: 50px;
+
 }
 
-.namePrice p{
-    font-size: 20px;
-    color: rgb(39, 39, 39);
-    text-align: center;
+.SseccionPrincipalAbout h1{
+   font-size: 40px;
+   color: #00B8D4;
 }
 
-.bigImage img{
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px #959595;
-    transition: all 0.3s ease;
+.SseccionPrincipalAbout p{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+
 }
 
-.bigImage img:hover{
-    box-shadow: 0px 0px 10px #2962ff;
-}
+  /* ------------ TARJETAS QUIENES SOMOS ----------- */
 
-.imageDescription{
-    width: 25%;
-    margin: 5px;
-}
-
-.imageDescription img{
-    width: 100%;
-    margin: 5px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px #959595;
-    transition: all 0.3s ease;
-}
-
-.imageDescription img:hover{
-    box-shadow: 0px 0px 10px #2962ff;
-    transform: scale(1.1);
-}
-
-.imageDescriptionContainer{
-    width: 100%;
-    height: 25%;
-    display: flex;
-    flex-direction: row;
-}
-
-.blockDescription{
-    width: 100%;
-    margin: 5px;
-    padding: 5px;
+  .Scontenedor{
+    width: 90%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
+    margin: 0 auto;
+    padding-bottom: 100px;
+  }
 
-#color{
-    background-color: transparent;
-    width: 30%;
-    position: relative;
-    border-radius: 5px;
-    padding: 9px;
-    left: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 3px #9d9d9d;
-    margin: 5px;
-}
-
-.cart, .buy{
-    color: #fff;
-    position: relative;
-    float: right;
-    background: none;
-    border: none;
-    background-color: #00B8D4;
-    position: relative;
-    width: 30%;
-    padding: 9px;
-    left: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 3px #9d9d9d;
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-
-.cart:hover, .buy:hover{
-    background-color: #2962ff;
-}
-
-
-.textDescription{
-    width: 100%;
-    margin: 5px;
-    padding: 5px;
-    text-align: justify;
-    color: rgb(39, 39, 39);
-}
-
-.textDescription p{
-    font-size: 20px;
-}
-
-/* ------------- BOTONES EDITAR Y ELIMINAR ------------- */
-
-.buttons{
-    display: flex;
-    justify-content:center;
-    margin-top: 15px;
-    margin-bottom:30px;
-}
-
-.buttons input{
+  .Scard {
     padding: 10px;
-    margin-left: 20px;
-    color: #fff;
+    background-color: transparent;
+    width: 350px;
+    height: 350px;
+    perspective: 1000px;
+    margin: 0 auto;
+
+  }
+  
+  .ScardContenedor {
     position: relative;
-    float: right;
-    background: none;
-    border: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .Scard:hover .ScardContenedor {
+    transform: rotateY(180deg);
+  }
+  
+  .ScardFront, .ScardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .ScardFront {
+    background-color: #bbb;
+    color: black;
+  }
+
+  .ScardFront img{
+    width: 100%;
+    height: auto;
+  }
+  
+  .ScardBack {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
     background-color: #00B8D4;
-    position: relative;
-    padding: 9px;
-    left: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 3px #9d9d9d;
-    margin: 5px;
-    transition: all 0.3s ease;
-}
+    color: white;
+    transform: rotateY(180deg);
+  }
 
-.buttons input:hover{
-    background-color: #2962ff;
-}
+  .ScardBack h5{
+    width: 100%;
+    font-size: 30px;
+  }
 
-/* ---------------- PIE DE PAGINA ---------- */
+  .ScardBack p{
+    margin: 10px;
+    width: 100%;
+  }
+
+
+  /* ---------------- PIE DE PAGINA ---------- */
 
 .Sfooter{
     width: 100%;
@@ -459,108 +392,176 @@ body{margin:0;padding:0;}
     margin-top: 15px;
 }
 
-
 /* ---------- MEDIA QUERYS ----------- */
 
 @media (min-width: 0px) and (max-width: 576px){
 
-/* -------------- CABECERA ------------- */
-
+    /* -------------- CABECERA ------------- */
+    
     header img{
         width: 200px;
     }
-
+    
     .Snavbar{
         display: none;
     }
-
+    
     /* --------------- ESTILOS USUARIO --------------- */
-
+    
     .user p{
         display: none;
         color: #1EA1F2;
         letter-spacing: 2px;
     }
-}
-
-@media (min-width: 577px) and (max-width: 899px){
-
-    header img{
-        width: 350px;
-    }
-
-    .Snavbar{
-        display: none;
-    }
-    
-    /* ---------------- PIE DE PAGINA ---------- */
-
-    .Sfooter img{
-        width: 50%;
-    }
-} 
-
-@media (min-width: 900px) and (max-width: 1920px){
-
-    .hamburger{
-        display: none;
-      }
-      
-    header img{
-        width: 200px;
-    }
-
-    .Sburger-menu .fa-bars{
-        display: none;
-    }
-
-    /* -------------- REDES SOCIALES FLOTANTES ------------ */
-
-    .social li{
-        padding:10px 10px;
-        transition:all 0.3s ease-in-out;
-      }
-      .social li:hover{
-          margin-right:-30px;
-      }
-      .social li:hover .fa-brands{
-          margin-left:20px;
-      }
-
-    /* ---------- ESTILOS USUARIOS -----------*/  
-
-    .dataUser i {
-        display: none;
-    }
-
-    /* ---------- DESCRIPCIÓN DE PRODUCTO -----------*/
-
-    .container{
-        width: 100%;
-        display : flex;
-        flex-direction : row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    
-    .productImage{
-        width: 30%;
-
-    }
-    
-    .productDescription{
-        width: 65%;
-        border-radius: 10px;
-    }
-
-    /* ---------------- PIE DE PAGINA ---------- */
-
-    .Sfooter div{
-        width: 30%;
-    }
-
-    .Sfooter img{
-        width: 80%;
-    }
 
 }
+    
+    @media (min-width: 577px) and (max-width: 899px){
+    
+        /* -------------- CABECERA ------------- */
+    
+        header img{
+            width: 350px;
+        }
+    
+        .Snavbar{
+            display: none;
+        }
+        
+        /* ---------------- PIE DE PAGINA ---------- */
+    
+        .Sfooter img{
+            width: 50%;
+        }
+    } 
+    
+    @media (min-width: 900px) and (max-width: 1920px){
+    
+        /* -------------- CABECERA ------------- */
+    
+        .hamburger{
+          display: none;
+      }
+  
+        header img{
+            width: 200px;
+        }
+    
+        .fa-bars{
+            display: none;
+        }
+    
+        .dataUser i {
+            display: none;
+        }
+
+        /* ---------------- SECCIÓN PRICIPAL SOBRE NOSOTROS ---------- */
+
+.SseccionPrincipalAbout{
+    text-align: center;
+    width: 85%;
+    margin: auto;
+    margin-top: 150px;
+    padding-top: 70px;
+    margin-bottom: 50px;
+
+}
+
+         /* ------------ TARJETAS QUIENES SOMOS ----------- */
+
+        .Scontenedor{
+            width: 85%;
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+        }
+        
+          .Scard {
+            margin: 15px;
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            margin: 0 auto;
+          }
+          
+          .ScardContenedor {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          }
+          
+          .Scard:hover .ScardContenedor {
+            transform: rotateY(180deg);
+          }
+          
+          .ScardFront, .ScardBack {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+          }
+          
+          .ScardFront {
+            background-color: #bbb;
+            color: black;
+          }
+        
+          .ScardFront img{
+            width: 100%;
+            height: auto;
+          }
+          
+          .ScardBack {
+            flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+            background-color: #00B8D4;
+            color: white;
+            transform: rotateY(180deg);
+          }
+        
+          .ScardBack h5{
+            width: 100%;
+            font-size: 30px;
+          }
+        
+          .ScardBack p{
+            margin: 10px;
+            width: 100%;
+          }
+    
+        /* -------------- REDES SOCIALES FLOTANTES ------------ */
+    
+        .social li{
+            padding:10px 10px;
+            transition:all 0.3s ease-in-out;
+          }
+          .social li:hover{
+              margin-right:-30px;
+          }
+          .social li:hover .fa-brands{
+              margin-left:20px;
+          }
+    
+        /* ---------------- PIE DE PAGINA ---------- */
+
+        .Sfooter{
+            position: absolute;
+            bottom: 0;
+        }
+    
+        .Sfooter div{
+            width: 30%;
+        }
+    
+        .Sfooter img{
+            width: 80%;
+        }
+    
+    }
