@@ -19,7 +19,7 @@ const apiProductsController ={
                 name: product.nombre,
                 description: product.descripcion,
                 category: product.categorias.Categoria,
-                detail: `http://globaltech-grupo2.herokuapp.com//${product.idProductos}`
+                detail: `http://globaltech-grupo2.herokuapp.com/${product.idProductos}`
             }
         })
 
