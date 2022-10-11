@@ -16,7 +16,7 @@ const apiUsersController ={
                 name: users.nombre,
                 user: users.nombreusuario,
                 imagen: users.imagen,
-                detail: `http://globaltech-grupo2.herokuapp.com/${users.idusuarios}`
+                detail: `http://globaltech-grupo2.herokuapp.com/apiUsers/${users.idusuarios}`
             }
         })
 
@@ -58,7 +58,7 @@ const apiUsersController ={
                     "user": user.nombreusuario,
                     "country": user.pais,
                     "image": user.imagen,
-                    "url_image": `http://globaltech-grupo2.herokuapp.com/${user.imagen}`,
+                    "url_image": `http://globaltech-grupo2.herokuapp.com/images/images_user/${user.imagen}`,
                     'endpoint': `/apiUsers/${user.idusuarios}`
                 })
             }else{
