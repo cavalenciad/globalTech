@@ -13,6 +13,8 @@ const apiProductsController ={
 
         const totalProducts = allProducts.length;
 
+        //Constante con el detalle de producto
+
         const productDetail = allProducts.map(product => {
             return {
                 id: product.idProductos,
