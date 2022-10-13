@@ -18,6 +18,7 @@ const apiProductsController ={
                 id: product.idProductos,
                 name: product.nombre,
                 description: product.descripcion,
+                image: product.imagen[0].Imagen,
                 category: product.categorias.Categoria,
                 detail: `http://globaltech-grupo2.herokuapp.com/apiProducts/${product.idProductos}`
             }
