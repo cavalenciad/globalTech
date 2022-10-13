@@ -5,6 +5,7 @@ const methodOverride = require('method-override');
 const session = require ('express-session');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const cookies = require ('cookie-parser');
+const cors = require('cors');
 const PORT = process.env.PORT || 3050
 
 const rutaMain = require("./routers/main.js");
@@ -28,6 +29,7 @@ app.use(session({
    saveUninitialized: false
 }));
 
+app.use(cors());
 app.use(cookies());
 app.use(methodOverride ("_method"));
 app.use(userLoggedMiddleware);
