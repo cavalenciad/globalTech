@@ -34,7 +34,7 @@ body
 {
 	display: flex;
 	align-items: center;
-	min-height: 182vh;
+	min-height: 169vh;
 	flex-direction: column;
 	background: #23242a;
   /*background-size: cover;
@@ -764,7 +764,7 @@ form a {
 @media (min-width: 900px) and (max-width: 1920px) {
 
 body {
-  min-height: 176vh;
+  min-height: 169vh;
 }
 
 
