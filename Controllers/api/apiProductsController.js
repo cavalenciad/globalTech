@@ -141,8 +141,6 @@ const apiProductsController ={
                 return lastProductDetail;
             })
 
-            console.log(lastProductDetail)
-
             if(productos){
                 res.status(200).json(lastProductDetail)
             }else{
