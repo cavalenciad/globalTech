@@ -1,6 +1,4 @@
 const db = require("../../database/models");
-const sequelize = require('Sequelize');
-const { where } = require("Sequelize");
 const Op = db.Sequelize.Op;
 
 const apiProductsController ={
