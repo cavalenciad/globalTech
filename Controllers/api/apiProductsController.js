@@ -64,55 +64,6 @@ const apiProductsController ={
 
     },
 
-    category: async (req,res) =>{
-        
-        try {
-            const allCategories =  await db.categorias.findAll({
-                    include:{
-                        all:true,
-                        nested:true
-                    }});
-    
-            //Constante con el detalle de producto
-    
-            let countCategory = function(id) {
-                let counter = 0;
-    
-                allCategories.forEach(category => {
-                    if(category.producto.Categoria_idCategoria === id){
-                        counter++;
-                    }
-                })
-                
-                return counter;
-            }
-
-            const categoryDetail = allCategories.map(category => {
-                return {
-                    id: category.idCategoria,
-                    category: category.Categoria,
-                    totalProducts: countCategory(this.id)
-                }
-            })
-    
-            if(allCategories) {
-                res.status(200).json({
-                    'data': categoryDetail,
-                    'status': 200,
-                    'endpoint': '/apiProducts/category'
-                })
-            }else{
-                res.status(404).json({'msg': 'No hay datos para mostrar'});
-            }
-        }
-        catch (error) {
-            console.log(error);
-            // res.render('error', { title: 'Error', msg: '500 - Ha ocurrido un error interno' });
-            res.status(500).json({'msg': '500 - Ha ocurrido un error interno'});        
-        }
-    
-        },
-
     detail: async (req,res) =>{
         
         try {
@@ -157,6 +108,58 @@ const apiProductsController ={
         }       
 
     },
+
+    category: async (req,res) =>{
+        
+        try {
+            const allCategories =  await db.categorias.findAll({
+                    include:{
+                        all:true,
+                        nested:true
+                    }});
+
+            const totalCategories = allCategories.length;
+    
+            let countAll = function(id) {
+                let counter = 0;
+    
+                allCategories.forEach(category => {
+                    category.producto.forEach(product => {
+                        if(id === product.Categoria_idCategoria){
+                        counter++;
+                        }
+                    })                    
+                })
+                
+                return counter
+            }
+
+            const categoryDetail = allCategories.map(categoria => {
+                return {
+                    id: categoria.idCategoria,
+                    category: categoria.Categoria,
+                    totalProducts: countAll(categoria.idCategoria)
+                }
+            });
+    
+            if(allCategories) {
+                res.status(200).json({
+                    'status': 200,
+                    'endpoint': '/apiCategory',
+                    'countCategories': totalCategories,
+                    'data': categoryDetail,
+                })
+            }else{
+                res.status(404).json({'msg': 'No hay datos para mostrar'});
+            }
+        }
+        catch (error) {
+            console.log(error);
+            // res.render('error', { title: 'Error', msg: '500 - Ha ocurrido un error interno' });
+            res.status(500).json({'msg': '500 - Ha ocurrido un error interno'});        
+        }
+    
+    }
 
 }
 
