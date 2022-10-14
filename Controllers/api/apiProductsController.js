@@ -1,4 +1,6 @@
 const db = require("../../database/models");
+const sequelize = require('Sequelize');
+const { where } = require("Sequelize");
 const Op = db.Sequelize.Op;
 
 const apiProductsController ={
@@ -96,6 +98,55 @@ const apiProductsController ={
                     "url_image": `http://globaltech-grupo2.herokuapp.com/images/Productos/${producto.imagen[0].Imagen}`,
                     'endpoint': `/apiProducts/${producto.idProductos}`
                 })
+            }else{
+                res.render('error', { title: 'Error', msg: 'No hay datos para mostrar' });
+            }
+        }
+
+        catch (error) {
+            console.log(error);
+            // res.render('error', { title: 'Error', msg: '500 - Ha ocurrido un error interno' });
+            res.status(500).json({'msg': '500 - Ha ocurrido un error interno'});        
+        }       
+
+    },
+
+    lastDetail: async (req,res) =>{
+        
+        try {
+            const productos = await db.productos
+            .findAll({
+                include:{
+                    all:true,
+                    nested:true,                    
+                }
+            });
+
+            let arrayId = productos.map(id => id.idProductos)
+            let lastId = (Math.max(...arrayId))
+
+            let lastProductDetail;
+            productos.forEach(product => {
+                if(product.idProductos === lastId) {
+                    lastProductDetail = {
+                        id: product.idProductos,
+                        name: product.nombre,
+                        description: product.descripcion,
+                        image: product.imagen[0].Imagen,
+                        category: product.categorias.Categoria,
+                        price: product.precio,
+                        color1: product.color1,
+                        color2: product.color2,
+                        detail: `http://globaltech-grupo2.herokuapp.com/apiProducts/${product.idProductos}`
+                    }
+                }
+                return lastProductDetail;
+            })
+
+            console.log(lastProductDetail)
+
+            if(productos){
+                res.status(200).json(lastProductDetail)
             }else{
                 res.render('error', { title: 'Error', msg: 'No hay datos para mostrar' });
             }
