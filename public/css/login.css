@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
-  font-family: Roboto;
+  font-family: 'Poppins', 'roboto', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 
@@ -24,7 +25,8 @@ header {
   box-shadow: 0px 1px 5px #a3a3a3;
   background-color: #fff;
   position: fixed;
-  
+  margin-bottom: 80px;
+  z-index: 100;
 }
 
 .Snavbar {
@@ -35,7 +37,7 @@ header {
 
 /* --------------- BODY  --------------- */
 
-body 
+/* body 
 {
 	display: flex;
 	align-items: center;
@@ -48,7 +50,8 @@ body
   height: 100%;
   text-align: center;
   padding-bottom: 145px;
-}
+} */
+
 /* -------------- ESTILOS ITEMS MENU ------------- */
 body{margin:0;padding:0;}
 .hamburger{
@@ -157,12 +160,9 @@ a{
   transition: ease 0.5s;
 }
 
-
 .Snavbar a:hover {
   color: #2962FF;
 }
-
-
 
 /* ---------- ICONO MENU HAMBURGUESA -------------- */
 
@@ -271,15 +271,22 @@ a{
     background-color:#25D366;
 }
 
+/* scroll-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 5em;
+} */
 
-
-/*----Caja de registro-----*/
+/*---- LOGIN -----*/
 
 #errorsDiv p {
   color: #fff;
   font-size: 12px;
   margin-top: 10px;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .jerrors {
@@ -291,257 +298,155 @@ a{
   padding-top: 8px; 
 }
 
-.box {
-	position: relative;
-	width: 85%;
-	height: 420px;
-	background: #1c1c1c;
-	border-radius: 8px;
-	overflow: hidden;
-  margin-bottom: 150px;
-  margin-top: 150px;
-  margin-left: 30px;
-  
+.Jbackground{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #23242a;
+}
 
-}
-.box::before {
-	content: '';
-	z-index: 1;
-	position: absolute;
-	top: -50%;
-	left: -50%;
-	width: 380px;
-	height: 420px;
-	transform-origin: bottom right;
-	background: linear-gradient(0deg,transparent,#00B8D4,#00B8D4);
-	animation: animate 6s linear infinite;
-}
-.box::after 
+.box
 {
-	content: '';
-	z-index: 1;
-	position: absolute;
-	top: -50%;
-	left: -50%;
-	width: 380px;
-	height: 420px;
-	transform-origin: bottom right;
-	background: linear-gradient(0deg,transparent,#00B8D4,#00B8D4);
-	animation: animate 6s linear infinite;
-	animation-delay: -3s;
+  position: relative;
+  width: 500px;
+  height: 450px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
 }
-@keyframes animate 
+
+.box::before
 {
-	0%
-	{
-		transform: rotate(0deg);
-	}
-	100%
-	{
-		transform: rotate(360deg);
-	}
-
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 500px;
+  height: 450px;
+  background: linear-gradient(0deg,transparent,#00b8d4,#00b8d4);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
 }
-
-form {
-	position: absolute;
-  width: 97%;
-  height: 416px;
-	inset: 2px;
-	background: #28292d;
-	padding: 35px 15px;
-	border-radius: 8px;
-	z-index: 2;
-	display: flex;
-  margin: 0 auto;
-	flex-direction: column;
-}
-
-h2 {
-	color: #00B8D4;
-	font-weight: 500;
-	text-align: center;
-	letter-spacing: 0.1em;
-}
-
-.inputBox {
-	position: relative;
-	width: 300px;
-	margin-top: 35px;
-  margin-left: 26px;
-}
-
-.inputBox input {
-	position: relative;
-	width: 100%;
-	padding: 1px 4px 6px 8px;
-	background: transparent;
-	outline: none;
-	box-shadow: none;
-	border: none;
-	color: white;
-	font-size: 1em;
-	letter-spacing: 0.05em;
-	transition: 0.5s;
-	
-}
-
-.inputBox span {
-	position: absolute;
-	left: 0;
-	padding: 20px 0px 10px;
-	pointer-events: none;
-	font-size: 1em;
-	color: #8f8f8f;
-	letter-spacing: 0.05em;
-	transition: 0.5s;
-}
-
-.inputBox input:valid  span,
-.inputBox input:focus  span 
-
+.box::after
 {
-	color: #00B8D4;
-	transform: translateX(0px) translateY(-34px);
-	font-size: 0.75em;
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 500px;
+  height: 450px;
+  background: linear-gradient(0deg,transparent,#00b8d4,#00b8d4);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
 }
-
-.inputBox i {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 2px;
-	background: #00B8D4;
-	border-radius: 4px;
-	overflow: hidden;
-	transition: 0.5s;
-	pointer-events: none;
-	z-index: 9;
-  
-}
-
-.inputBox input:valid  i,
-.inputBox input:focus  i 
-
+@keyframes animate
 {
-	height: 44px;
+  0%
+  {
+      transform:rotate(0deg)
+  }
+  100%
+  {
+      transform:rotate(360deg)
+  }
 }
-
-.links {
-	display: flex;
-	justify-content: space-between;
+.form
+{
+  position: absolute;
+  inset: 2px;
+  border-radius: 8px;
+  background: #28292d;
+  z-index: 10;
+  padding: 40px 40px;
+  display: flex;
+  flex-direction: column;
 }
-
-.links a {
-	
+.form h2
+{
+  color: #00b8d4;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.inputBox
+{
+  position: relative;
+  width: 100%;
   margin-top: 20px;
-  margin-left: 22px;
-	font-size: 0.75em;
-	color: #8f8f8f;
-	text-decoration: beige;
 }
-
-.links a:hover, 
-.links a:nth-child(2)
-
+.inputBox input
 {
-	color: #00B8D4;
-}
-
-input[type="submit"] {
-	border: none;
-	outline: none;
-	padding: 11px 25px;
-	background: #00B8D4;
-	cursor: pointer;
-	border-radius: 4px;
-	font-weight: 600;
-	width: 100px;
-	margin-top: 10px;
-}
-
-input[type="submit"]:active {
-	opacity: 0.8;
-}
-
-
-/*------Cajas para completar login----*/
-
-
-
-/*------Botones Login----*/
-
-button {
-  background-color: #00B8D4;
+  position: relative;
+  width: 100%;
+  padding: 10px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
   border: none;
   color: white;
-  margin-bottom: 10px;
-  
-  border-radius: 5px;
-  font-size: 17px;
-  font-weight: bold;
-  text-align: center;
-  transition: all 0.3s;
-  display: flex;
-  margin: 0 auto;
-  padding: 13px;
-  margin-top: 16px;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+.inputBox i
+{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #00b8d4;
+  border-radius: 4px;
 }
 
-button:hover {
-  transform: scale(0.99);
+.links
+{
+  display: flex;
+  justify-content: justify;
+}
+[type=checkbox]
+{
+  margin-top: 20px;
+}
+.links p
+{
+  margin: 20px 20px;
+  color: white;
+  text-align: justify;
+}
+input[type="submit"]
+{
+  align-self: center;
+  border: none;
+  outline: none;
+  color: white;
+  background: #00b8d4;
+  padding: 11px 25px;
+  width: 200px;
+  margin-top: 25px;
+  border-radius: 4px;
+  font-size: 0.90em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+input[type="submit"]:hover
+{
   background-color: #2962FF;
 }
-
-.jOlvidaste {
-  height: 40px;
+.unregistered
+{
   text-align: center;
-  border-bottom: 1px solid;
+  justify-content: center;
+  margin-top: 20px;
+	color: #8f8f8f;
+  transition: all 0.3s;
 }
-
-.jNoCuenta {
-  height: 40px;
-  text-align: center;
-}
-
-.jOlvidaste :hover {
-  text-decoration: underline;
-}
-
-.jNoCuenta :hover {
-  text-decoration: underline;
-}
-
-form a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-
-/*-----Checkbox recuerdame----*/
-
-.jRecuerdame {
-  font-size: 15px;
-  padding-left: 40px;
-  padding-right: 10px;
-  color: #fff;
-  display: flex;
-  justify-content: flex-start;
-  padding-top: 15px;
-}
-
-.jCheckbox {
-  position: relative;
-  top: 2px;
-  right: 4px;
-}
-
-#jRecuerdame {
-  width: 15px;
-  height: 15px;
-  box-shadow: 0.8px;
+.unregistered:hover
+{
+  color: #00B8D4;
 }
 
 /*----- Estilos Footer-----*/
@@ -555,14 +460,11 @@ form a {
   flex-wrap: wrap;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-top: 610px;
-  position: fixed;
 }
 
 .Smapa{
   flex-direction: column;
   display: flex;
-
 }
 
 .Smapa a:hover{
@@ -571,35 +473,63 @@ form a {
 
 .Sfooter div {
   padding-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   width: 90%;
   margin: 0 auto;
   text-align: center;
 }
 
 .Sfooter img {
-  width: 80%;
+  width: 100%;
 }
 
 .Sfooter h3 {
-  color: #00B8D4;
+  color: #2962FF;
   letter-spacing: 1px;
-  margin-top: -12px;
 }
 
 .Sfooter p {
   margin-top: 15px;
-  font-size: 14px;
 }
-
-
-
 
 /*------Media Queries--------*/
 
 /*---Media Querie Móvil-----*/
 
 @media (min-width: 0px) and (max-width: 576px) {
+
+  .box{
+    height: 450px;
+    width: 500px;
+  }
+  
+  .box::after {
+    height: 450px;
+    width: 500px;  
+  }
+  
+  .box::before {
+    height: 450px;
+    width: 500px;  
+  }
+
+  #errorsDiv p {
+    width: 100%;
+    color: #fff;
+    font-size: 10px;
+    margin-top: 5px;
+    letter-spacing: 1px;
+    align-content: center;
+    text-align: center;
+  }
+
+  .Merrors{
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: lighter;  
+    letter-spacing: 0.05em;
+    margin-bottom: 0px;
+  }
 
   /* -------------- CABECERA ------------- */
 
@@ -611,8 +541,6 @@ form a {
     display: none;
   }
 
-
-
   /* --------------- ESTILOS USUARIO --------------- */
 
   .user p {
@@ -621,26 +549,40 @@ form a {
     letter-spacing: 2px;
   }
 
-  form {
+  /* form {
     width: 98%;
     position: relative;
     left: 0%;
     bottom: 300px;
   }
 
-
-.jRecuerdame {
-  margin-top: 10px;
-  font-size: 14px;
-  position: relative;
-  left: -13px;
-  padding-bottom: 10px;
-}
+  .jRecuerdame {
+    margin-top: 10px;
+    font-size: 14px;
+    position: relative;
+    left: -13px;
+    padding-bottom: 10px;
+  } */
 }
 
 /*---Media Querie Tablet ---*/
 
 @media (min-width: 577px) and (max-width: 899px) {
+
+  .box{
+    height: 450px;
+    width: 500px;
+  }
+  
+  .box::after {
+    height: 450px;
+    width: 500px;  
+  }
+  
+  .box::before {
+    height: 450px;
+    width: 500px;  
+  }
 
   header img {
     width: 350px;
@@ -650,11 +592,7 @@ form a {
     display: none;
   }
 
-  .box {
-    width: 63%;
-  }
-
-  form {
+  /* form {
     width: 98%;
     height: 415px;
     bottom: 300px;
@@ -673,9 +611,7 @@ form a {
 
   .inputBox i {
     width: 100%;
-  }
-
-
+  } 
 
   .jRecuerdame {
     margin-top: 10px;
@@ -683,19 +619,40 @@ form a {
     position: relative;
     left: -13px;
     padding-bottom: 10px;
+  }*/
+
+  .Jbackground{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: #23242a;
   }
 
-
-.Sfooter img {
-  width: 50%;
-}
-
-
+  .Sfooter img 
+  {
+    width: 50%;
+  }
 }
 
 /*---Media Querie Desktop---*/
 
 @media (min-width: 900px) and (max-width: 1920px) {
+
+  .box{
+    height: 450px;
+    width: 500px;
+  }
+  
+  .box::after {
+    height: 450px;
+    width: 500px;  
+  }
+  
+  .box::before {
+    height: 450px;
+    width: 500px;  
+  }
 
   /* -------------- CABECERA ------------- */
   .hamburger{
@@ -737,7 +694,7 @@ form a {
   }
 
   /* ---------------- PIE DE PAGINA ---------- */
-  .box {
+  /*.box {
     position: fixed;
     width: 20%;
     height: 421px; 
@@ -747,19 +704,17 @@ form a {
     width:100%;
   }
 
-  form {
+   form {
     width: 99%;
     padding-top: 34px;
     padding-right: 20px;
     padding-left: 15px;
-  }
+  } 
 
   h2 {
     padding-top: 15px;
     
   }
-
- 
 
   .links a {
     position: relative;
@@ -769,7 +724,7 @@ form a {
 
   .jRecuerdame {
     display: flex;
-  }
+  }*/
 
   .Sfooter {
     position: absolute;
@@ -778,10 +733,10 @@ form a {
 
   .Sfooter div{
     width: 30%;
-}
+  }
 
-.Sfooter img{
+  .Sfooter img{
     width: 80%;
-}
+  }
 }
 
