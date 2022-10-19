@@ -80,7 +80,7 @@
                     <i></i>                        
                 </div>
                 <% if (locals.errors && errors.contrasena) { %>
-                    <div class="Qerrors">
+                    <div class="Merrors">
                         <%= errors.contrasena.msg %> 
                     </div>
                 <% } %>
@@ -90,7 +90,7 @@
                         <label for="imagen">Imagen</label>
                         <input type="file" name="imagen" placeholder="Imagen de Perfil" data-label="Imagen">
                         <% if (locals.errors && errors.imagen) { %>
-                            <div class="Qerrors">
+                            <div class="Merrors">
                                 <%= errors.imagen.msg %> 
                             </div>
                         <% } %>
