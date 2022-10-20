@@ -19,9 +19,8 @@ const userController = {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
-        }
-
-        db.usuarios.findOne({
+        }else{
+            db.usuarios.findOne({
             where: {email: req.body.email}
         })
         .then((resultado)=>{
@@ -37,20 +36,21 @@ const userController = {
             }else{
                 db.usuarios.create({    
                     email: req.body.email,
-                    nombre: req.body.nombre,
-                    apellido: req.body.apellido,
-                    nombreusuario: req.body.nombreUser,
-                    pais: req.body.pais,
+                    nombre: req.body.name,
+                    apellido: req.body.lastName,
+                    nombreusuario: req.body.userName,
+                    pais: req.body.country,
                     imagen: req.file.filename,
                     contrasena: bcrypt.hashSync(req.body.contrasena, 10),
                     terminosycondiciones: 1
                 })
                 .then((user) => {
-                    console.log(req.file);
                     res.redirect('/user/login');
                 })                
             }
-        })            
+        })
+        }        
+
     },
     login: (req, res) => {
         res.render("login");

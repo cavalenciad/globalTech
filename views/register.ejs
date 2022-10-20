@@ -36,7 +36,7 @@
                 <div hidden id="errorsDiv"></div>
 
                 <div class="inputBox">
-                    <input placeholder="Email" type="text" name="email" data-label="Email">
+                    <input placeholder="Email" type="email" name="email" data-label="Email">
                     <i></i>
                 </div>
                 <% if (locals.errors && errors.email) { %>
@@ -76,11 +76,11 @@
                 <% } %>                
 
                 <div class="inputBox">
-                    <input placeholder="Contraseña" type="text" name="contrasena" data-label="Contraseña">
+                    <input placeholder="Contraseña" type="password" name="contrasena" data-label="Contraseña">
                     <i></i>                        
                 </div>
                 <% if (locals.errors && errors.contrasena) { %>
-                    <div class="Merrors">
+                    <div class="Qerrors">
                         <%= errors.contrasena.msg %> 
                     </div>
                 <% } %>
@@ -90,7 +90,7 @@
                         <label for="imagen">Imagen</label>
                         <input type="file" name="imagen" placeholder="Imagen de Perfil" data-label="Imagen">
                         <% if (locals.errors && errors.imagen) { %>
-                            <div class="Merrors">
+                            <div class="Qerrors">
                                 <%= errors.imagen.msg %> 
                             </div>
                         <% } %>
@@ -98,7 +98,7 @@
                 </div>
 
                 <div class="inputSelect">
-                    <select data-label="País" name="pais">
+                    <select data-label="País" name="country">
                         <option disabled selected>Seleccionar país</option>
                         <option value="Colombia">Colombia</option>
                         <option value="Argentina">Argentina</option>
